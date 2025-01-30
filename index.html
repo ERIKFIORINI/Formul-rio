@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+</head>
+<body>
+
+    <form id="formulario" onsubmit="mostrarinfo(event)">
+       
+        <h1>Adicione seu Currículo aqui</h1>
+
+        <label for="name">Seu nome aqui:</label> 
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Qual o seu email?</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="date">Sua data de nascimento</label>
+        <input type="date" id="date" name="date" required> <!--Tipo de input para colocar uma data e talvez ser validada depois-->
+
+        <label for="file">Adicione seu Currículo</label>
+        <input type="file" id="file" name="file" required>  <!--Tipo de input para colocar arquivos-->
+
+        <label for="masculino">Masculino</label>
+        <input type="radio" id="masculino" name="genero" value="masculino" required> <!--Tipo de input para assinalar-->
+    
+        <label for="feminino">Feminino</label>
+        <input type="radio" id="feminino" name="genero" value="feminino" required>
+    
+        <label for="outro">Outro</label>
+        <input type="radio" id="outro" name="genero" value="outro" required>
+    
+        <label for="prefiro_nao_dizer">Prefiro não dizer</label>
+        <input type="radio" id="prefiro_nao_dizer" name="genero" value="prefiro_nao_dizer" required>
+
+        <button type="submit">Enviar</button> <!--Botão para validar as informações em geral-->
+
+        <label for="comentario">Comentário:</label><br>
+        <textarea id="comentario" name="comentario" rows="4" cols="50" placeholder="Deixe uma mensagem.."></textarea><br>
+        <button type="button" onclick="alertatela()">Enviar</button>
+
+</textarea>
+
+    
+    </form>
+
+    <p id="mensagemnome"></p> <!--Só pra depois aparecer na tela alguma mensagem-->
+
+</body>
+</html>
